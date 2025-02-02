@@ -1,0 +1,155 @@
+.services {
+  padding: 4rem 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.serviceItem {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.serviceItem h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.serviceItem ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.serviceItem li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.serviceItem li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.specialties {
+  margin-bottom: 4rem;
+}
+
+.specialties h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.specialtiesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.specialtyItem {
+  background-color: #f0f4f8;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.specialtyItem:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.specialtyIcon {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.specialtyItem:hover .specialtyIcon {
+  color: #fff;
+}
+
+.cta {
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.cta p {
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 2rem 1rem;
+  }
+}
+
