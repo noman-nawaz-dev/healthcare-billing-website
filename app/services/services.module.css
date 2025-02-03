@@ -151,5 +151,9 @@
   .cta {
     padding: 2rem 1rem;
   }
+
+  .specialtiesList{
+    justify-content: unset;
+  }
 }
 
