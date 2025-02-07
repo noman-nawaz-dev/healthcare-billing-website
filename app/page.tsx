@@ -4,12 +4,16 @@ import WhyUs from "@/components/WhyUs";
 import EMRList from "@/components/EMRList";
 import CallToAction from "@/components/CallToAction";
 import AnimatedSection from "@/components/AnimatedSection";
+import RotatingBanners from "@/components/RotatingBanners";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.home}>
       <Hero />
+      <AnimatedSection>
+        <RotatingBanners />
+      </AnimatedSection>
       <AnimatedSection>
         <WhyUs />
       </AnimatedSection>
@@ -28,6 +32,9 @@ export default function Home() {
       </AnimatedSection>
       <AnimatedSection>
         <EMRList />
+      </AnimatedSection>
+      <AnimatedSection>
+        <RotatingBanners />
       </AnimatedSection>
       <AnimatedSection>
         <CallToAction />
