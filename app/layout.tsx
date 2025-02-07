@@ -1,21 +1,25 @@
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import type React from "react" // Added import for React
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import type React from "react"; // Added import for React
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AthlonMD - Healthcare Billing Solutions",
-  description: "Simplifying healthcare billing processes and maximizing revenue for practices.",
-}
+  description:
+    "Simplifying healthcare billing processes and maximizing revenue for practices.",
+  icons: {
+    icon: "/logo-title.png",
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -25,6 +29,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }
-
