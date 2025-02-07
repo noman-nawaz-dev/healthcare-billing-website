@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Simplifying healthcare billing processes and maximizing revenue for practices.",
   icons: {
-    icon: "/logo-title.png",
+    icon: "/logo-title.webp",
   },
 };
 

@@ -26,7 +26,7 @@ const Header = () => {
       <div className={`container ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/logos.png"
+            src="/logos.webp"
             alt="AthlonMD Logo"
             width={240}
             height={60}

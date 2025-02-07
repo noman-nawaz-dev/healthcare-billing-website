@@ -21,7 +21,7 @@ export default function Home() {
         <section className={styles.imageSection}>
           <div className="container">
             <Image
-              src="/medical_billing1.png"
+              src="/medical_billing1.webp"
               alt="Medical Billing Process"
               width={1200}
               height={600}

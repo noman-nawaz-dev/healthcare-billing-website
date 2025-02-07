@@ -6,19 +6,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./RotatingBanners.module.css";
 
 const banners = [
-  { src: "/banner1-removebg-preview.png", alt: "Healthcare Banner 1" },
-  { src: "/banner2-removebg-preview.png", alt: "Healthcare Banner 2" },
-  { src: "/banner3-removebg-preview.png", alt: "Healthcare Banner 3" },
-  { src: "/banner4-removebg-preview.png", alt: "Healthcare Banner 4" },
-  { src: "/banner5-removebg-preview.png", alt: "Healthcare Banner 5" },
-  { src: "/banner6-removebg-preview.png", alt: "Healthcare Banner 6" },
-  { src: "/banner7-removebg-preview.png", alt: "Healthcare Banner 7" },
-  { src: "/banner8-removebg-preview.png", alt: "Healthcare Banner 8" },
-  { src: "/banner9-removebg-preview.png", alt: "Healthcare Banner 9" },
-  { src: "/banner10-removebg-preview.png", alt: "Healthcare Banner 10" },
-  { src: "/banner11-removebg-preview.png", alt: "Healthcare Banner 11" },
-  { src: "/banner12-removebg-preview.png", alt: "Healthcare Banner 12" },
-  { src: "/banner13-removebg-preview.png", alt: "Healthcare Banner 13" },
+  { src: "/banner1-removebg-preview.webp", alt: "Healthcare Banner 1" },
+  { src: "/banner2-removebg-preview.webp", alt: "Healthcare Banner 2" },
+  { src: "/banner3-removebg-preview.webp", alt: "Healthcare Banner 3" },
+  { src: "/banner4-removebg-preview.webp", alt: "Healthcare Banner 4" },
+  { src: "/banner5-removebg-preview.webp", alt: "Healthcare Banner 5" },
+  { src: "/banner6-removebg-preview.webp", alt: "Healthcare Banner 6" },
+  { src: "/banner7-removebg-preview.webp", alt: "Healthcare Banner 7" },
+  { src: "/banner8-removebg-preview.webp", alt: "Healthcare Banner 8" },
+  { src: "/banner9-removebg-preview.webp", alt: "Healthcare Banner 9" },
+  { src: "/banner10-removebg-preview.webp", alt: "Healthcare Banner 10" },
+  { src: "/banner11-removebg-preview.webp", alt: "Healthcare Banner 11" },
+  { src: "/banner12-removebg-preview.webp", alt: "Healthcare Banner 12" },
+  { src: "/banner13-removebg-preview.webp", alt: "Healthcare Banner 13" },
 ];
 
 const RotatingBanners = () => {

@@ -7,7 +7,7 @@ const blogPosts = {
     title: "Medical Billing & Coding Process",
     author: "John Doe",
     date: "May 15, 2023",
-    image: "/medical_billing1.png",
+    image: "/medical_billing1.webp",
     readTime: "5 min read",
     tags: ["Medical Billing", "Coding", "Healthcare"],
     content: `
