@@ -1,6 +1,6 @@
-import ContactForm from "@/components/ContactForm"
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
-import styles from "./contact.module.css"
+import ContactForm from "@/components/ContactForm";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import styles from "./contact.module.css";
 
 export default function Contact() {
   return (
@@ -11,22 +11,21 @@ export default function Contact() {
           <div className={styles.infoItem}>
             <FaPhone className={styles.icon} />
             <h2>Business Phone Number</h2>
-            <p>xxx-xxx-xxxx</p>
+            <p>athlonmdhelp@gmail.com</p>
           </div>
           <div className={styles.infoItem}>
             <FaEnvelope className={styles.icon} />
             <h2>Email Address</h2>
-            <p>support@athlonmd.com</p>
+            <p>athlonmdhelp@gmail.com</p>
           </div>
           <div className={styles.infoItem}>
             <FaMapMarkerAlt className={styles.icon} />
             <h2>Physical Address</h2>
-            <p>123 Healthcare Lane, Medical City, HC 12345</p>
+            <p>1942 Broadway Ste 314C # 95437, Boulder, CO, 80302</p>
           </div>
         </div>
         <ContactForm />
       </div>
     </div>
-  )
+  );
 }
-

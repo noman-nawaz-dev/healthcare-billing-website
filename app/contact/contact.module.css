@@ -18,6 +18,9 @@
 }
 
 .infoItem {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 8px;

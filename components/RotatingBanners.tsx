@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import styles from "./RotatingBanners.module.css";
 
 const banners = [
@@ -22,37 +22,38 @@ const banners = [
 ];
 
 const RotatingBanners = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
+  const controls = useAnimation();
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 2000);
+    controls.start({
+      x: "-100%",
+      transition: {
+        duration: 20,
+        ease: "linear",
+        repeat: Number.POSITIVE_INFINITY,
+      },
+    });
+  }, [controls]);
 
-    return () => clearInterval(timer);
-  }, []);
+  const allBanners = [...banners, ...banners]; // Duplicate banners for seamless loop
 
   return (
     <section className={styles.bannerSection}>
       <div className={styles.bannerContainer}>
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={currentBanner}
-            initial={{ opacity: 0, x: 1000 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -1000 }}
-            transition={{ duration: 0.5 }}
-            className={styles.bannerWrapper}
-          >
-            <Image
-              src={banners[currentBanner].src || "/placeholder.svg"}
-              alt={banners[currentBanner].alt}
-              layout="fill"
-              objectFit="contain"
-              quality={100}
-            />
-          </motion.div>
-        </AnimatePresence>
+        <motion.div className={styles.bannerWrapper} animate={controls}>
+          {allBanners.map((banner, index) => (
+            <div key={index} className={styles.banner}>
+              <Image
+                src={banner.src || "/placeholder.svg"}
+                alt={banner.alt}
+                width={100}
+                height={100}
+                objectFit="contain"
+                quality={100}
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

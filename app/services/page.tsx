@@ -11,6 +11,7 @@ import {
   FaUserNurse,
 } from "react-icons/fa";
 import styles from "./services.module.css";
+import Image from "next/image";
 
 const services = [
   {
@@ -81,8 +82,26 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our Services
+          <div className={styles.ourServicesImage}>
+            <Image
+              src="/our-services.png"
+              alt="Medical Billing Process"
+              width={1400}
+              height={600}
+              layout="responsive"
+            />
+          </div>
         </motion.h1>
+
+        <div className={styles.rcmImage}>
+          <Image
+            src="/service1.png"
+            alt="Medical Billing Process"
+            width={1400}
+            height={600}
+            layout="responsive"
+          />
+        </div>
 
         <section className={styles.servicesList}>
           {services.map((service, index) => (
@@ -94,7 +113,7 @@ export default function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className={styles.serviceIcon}>{service.icon}</div>
-              <h2>{service.title}</h2>
+              <h3>{service.title}</h3>
               <ul>
                 {service.items.map((item, itemIndex) => (
                   <li key={itemIndex}>{item}</li>
