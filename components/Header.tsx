@@ -4,6 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -23,6 +29,30 @@ const Header = () => {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+      <div className={styles.topBanner}>
+        <div className="container">
+          <div className={styles.topBannerContent}>
+            <div className={styles.address}>athlonmdhelp@gmail.com</div>
+            <div className={styles.slogan}>
+              Boost Revenue, Elevate HealthCare
+            </div>
+            <div className={styles.socialIcons}>
+              <a href="#" aria-label="Facebook">
+                <FaFacebookF />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <FaTwitter />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <FaLinkedinIn />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={`container ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
