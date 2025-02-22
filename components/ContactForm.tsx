@@ -48,7 +48,7 @@ const ContactForm = () => {
 
     try {
       const templateParams = {
-        to_email: "athlonmdhelp@gmail.com",
+        to_email: process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL!,
         from_name: formData.fullName,
         from_email: formData.email,
         subject: `New Inquiry: ${formData.inquiryType}`,
