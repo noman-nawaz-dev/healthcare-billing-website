@@ -46,10 +46,10 @@ const Footer = () => {
             80302
           </p>
           <p>
-            <FaPhone /> athlonmdhelp@gmail.com
+            <FaPhone /> AthlonMDhelp@gmail.com
           </p>
           <p>
-            <FaEnvelope /> athlonmdhelp@gmail.com
+            <FaEnvelope /> AthlonMDhelp@gmail.com
           </p>
         </div>
         <div className={styles.footerSection}>
