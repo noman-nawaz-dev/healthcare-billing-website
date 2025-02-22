@@ -13,6 +13,8 @@ import {
   FaComments,
 } from "react-icons/fa";
 import styles from "./ContactForm.module.css";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -38,10 +40,71 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you for your inquiry. We will get back to you soon!");
+
+    // Show loading toast
+    const loadingToast = toast.loading("Submitting your inquiry...");
+
+    try {
+      const templateParams = {
+        to_email: "athlonmdhelp@gmail.com",
+        from_name: formData.fullName,
+        from_email: formData.email,
+        subject: `New Inquiry: ${formData.inquiryType}`,
+        message: formData.message,
+        state: formData.state,
+        specialty: formData.specialty,
+        npi: formData.npi,
+        phone_number: formData.phoneNumber,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      // Dismiss loading toast and show success toast
+      toast.dismiss(loadingToast);
+      toast.success(
+        "Thank you for your inquiry. We will get back to you soon!",
+        {
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }
+      );
+
+      setFormData({
+        fullName: "",
+        email: "",
+        state: "",
+        specialty: "",
+        npi: "",
+        phoneNumber: "",
+        inquiryType: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+
+      // Dismiss loading toast and show error toast
+      toast.dismiss(loadingToast);
+      toast.error(
+        "Sorry, there was an error sending your inquiry. Please try again later.",
+        {
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }
+      );
+    }
   };
 
   return (
