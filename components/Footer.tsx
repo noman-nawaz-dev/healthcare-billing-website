@@ -42,13 +42,14 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h3>Contact Us</h3>
           <p>
-            <FaMapMarkerAlt /> 123 Healthcare Lane, Medical City, HC 12345
+            <FaMapMarkerAlt /> 1942 Broadway Ste 314C # 95437, Boulder, CO,
+            80302
           </p>
           <p>
-            <FaPhone /> (123) 456-7890
+            <FaPhone /> athlonmdhelp@gmail.com
           </p>
           <p>
-            <FaEnvelope /> info@athlonmd.com
+            <FaEnvelope /> athlonmdhelp@gmail.com
           </p>
         </div>
         <div className={styles.footerSection}>
