@@ -51,6 +51,7 @@ const ContactForm = () => {
         to_email: process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL!,
         from_name: formData.fullName,
         from_email: formData.email,
+        inquiryType: formData.inquiryType,
         subject: `New Inquiry: ${formData.inquiryType}`,
         message: formData.message,
         state: formData.state,
