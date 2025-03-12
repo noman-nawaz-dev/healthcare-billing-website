@@ -64,13 +64,16 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`container ${styles.headerContent}`}>
+      <div
+        className={`container ${styles.headerContent}`}
+        style={{ padding: "6px 0px" }}
+      >
         <Link href="/" className={styles.logo}>
           <Image
             src="/logos.webp"
             alt="AthlonMD Logo"
-            width={240}
-            height={60}
+            width={200}
+            height={240}
             priority
             className={styles.logoImage}
           />
