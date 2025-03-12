@@ -55,13 +55,19 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h3>Follow Us</h3>
           <div className={styles.socialIcons}>
-            <a href="#" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com/share/19yWoubM85/?mibextid=qi2Omg"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
             <a href="#" aria-label="Twitter">
               <FaTwitter />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/company/athlonmdllc/"
+              aria-label="LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
             <a href="#" aria-label="Instagram">
