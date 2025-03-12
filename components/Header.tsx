@@ -66,7 +66,7 @@ const Header = () => {
       </div>
       <div
         className={`container ${styles.headerContent}`}
-        style={{ padding: "6px 0px" }}
+        style={{ padding: "6px 16px" }}
       >
         <Link href="/" className={styles.logo}>
           <Image
